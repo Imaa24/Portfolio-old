@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Oswald', sans-serif;
+    scroll-behavior: smooth;
 }
 
 :root{
@@ -627,3 +628,131 @@ main{
         flex-basis: 100%;
     }
 }
+
+#portfolio{
+    padding: 70px 30px;
+}
+
+#portfolio .port-row{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+#portfolio .port-row .port-item{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#portfolio .port-row .port-item .port-img img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+#portfolio .port-row .port-item .port-info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--themeColor);
+    padding: 0 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transform: scale(0);
+    transition: 0.4s;
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+#portfolio .port-row .port-item:hover .port-info{
+    transform: scale(1);
+    visibility: visible;
+}
+
+#portfolio .port-row .port-item .port-info h4{
+    color: var(--bgColor);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+#portfolio .port-row .port-item .port-info h4 + p{
+    color: var(--bgColor);
+    font-size: 14px;
+}
+
+#portfolio .port-row .port-item .port-info a{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+    background-color: var(--bgColor);
+    border-radius: 50%;
+    color: var(--themeColor);
+    line-height: 46px;
+    transition: 0.4s;
+}
+
+#portfolio .port-row .port-item .port-info a:hover{
+    background-color: var(--sideBGColor);
+    color: var(--bgColor);
+}
+
+@media screen and (max-width:650px) {
+    #portfolio{
+        padding: 50px 10px;
+    }
+    #portfolio .port-row{
+        grid-gap: 15px;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width:350px) {
+    #portfolio .port-row{
+        grid-gap: 15px;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+#service{
+    padding: 70px 30px;
+    background-color: white;
+}
+
+#service .service-row{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+}
+
+#service .service-row .service-box{
+    display: flex;
+    gap: 20px;
+}
+
+#service .service-row .service-box .icon i{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--themeColor);
+    font-size: 22px;
+    line-height: 46px;
+    background-color: var(--themeColor);
+    color: var(--bgColor);
+    transition: 0.7s;
+    text-align: center;
+}
+
+#service .service-row .service-box:hover .icon i{
+    color: var(--themeColor);
+    background-color: var(--bgColor);
+}
+
