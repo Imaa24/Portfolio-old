@@ -249,7 +249,7 @@ main{
 }
 
 .divider{
-    width: 80px;
+    width: 110px;
     height: 4px;
     background-color: var(--themeColor);
     border-radius: 3px;
@@ -894,4 +894,12 @@ main{
     #contact{
         padding: 50px 10px;
     }
+}
+
+#skill .divider{
+    width: 70px;
+}
+
+#resume .divider{
+    width: 140px;
 }
